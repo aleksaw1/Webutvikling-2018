@@ -1,0 +1,80 @@
+*{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(11, 1fr);
+    grid-template-areas: 
+        "header header header header header"
+        "header header header header header"
+        "header header header header header"
+        "header header header header header"
+       
+        "nav nav nav nav nav"
+        "maincon maincon maincon aside aside"
+        "maincon maincon maincon aside aside"
+        "maincon maincon maincon aside aside"
+        "maincon maincon maincon . ."
+        "maincon maincon maincon . ."
+       
+        ;
+    
+        
+        
+}
+header{
+    grid-area: header;
+}
+nav.mainnav{
+    grid-area: nav;
+}
+.main-content{
+    grid-area: maincon;
+}
+h1.myname{
+    max-width: 1024px;
+    
+    margin: 10px auto;
+}
+img.banner{
+    width: 100%;
+    height: auto;
+}
+.mainnav .flex-container{
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+.mainnav .flex-container li a
+{
+    text-decoration: none;
+    color: black;
+    background: lightgrey;
+    padding: 5px 10px; 
+}
+.main-content{
+    overflow-y: scroll;
+    height: 300px;
+}
+article{
+    margin: 10px 5px;
+    text-align: center;
+    font-size: 1.2em;
+}
+.single-line{
+    width: 100%;
+    height: 1px;
+    border-top:1px solid black;
+}
+img{
+    width: 100%;
+    height: auto;
+    margin: 10px 0px;
+}
+h2{
+    text-align: center;
+}
