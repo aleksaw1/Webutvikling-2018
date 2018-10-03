@@ -1,7 +1,7 @@
 *{
     border: 0;
-    padding: 5px;
-    margin: 0;
+    padding: 5;
+    margin: 20;
 }
 body{
     display: grid;
@@ -10,11 +10,11 @@ body{
     grid-template-areas: 
         "header header header header header"
         "nav nav nav nav nav"
-        "maincon maincon maincon aside aside"
+        "maincon maincon maincon maincon maincon"
         "footer footer footer footer footer"
         ;
     
-    }  
+        
         
 }
 header{
@@ -35,12 +35,11 @@ nav.mainnav{
 
 h1.myname{
     max-width: 1024px;
-    
     margin: 10px auto;
 }
 img.banner{
-    width: 500%;
-
+    width: 100%;
+  
 }
 .mainnav .flex-container{
     margin: 10px;
@@ -55,16 +54,12 @@ img.banner{
     background: lightgrey;
    
 }
-.main-content{
-    overflow-y: scroll;
-    height: 500px;
-    padding-top: 50px;
-}
+
 article{
     margin: 10px 5px;
     text-align: center;
     font-size: 1.2em;
-    margin-bottom: 100px;
+    padding-top: 50px;
 }
 .single-line{
     width: 100%;
@@ -72,51 +67,45 @@ article{
     border-top:1px solid black;
 }
 img{
-    width: 100%;
-  
+    width: 50%;
+    
+}
+
+.img1 {
+    padding-left: 300px;
+
 
 }
 h2{
     text-align: center;
     padding-top: 50px;
-    padding-bottom: 30px;
 }
 .vid-flex{
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
-
-
-
 .gitlink{
+    padding:20px;
+    
+}
+.mylink{
     padding: 10px;
-    max-height: 30px;
-    align-self: center;
+    margin: 20px;
+    background-color: aqua;
 }
-.mylinks{
-    padding: 30px;
-    align-self: center;
-    list-style-type: none;
-}
-
-.li {
-    list-style-type: none;
-    text-decoration: none;
-}
-
 .flex-right-container{
     display: flex;
     justify-content: flex-end;
 }
 .myname1{
     font-size: 1.2em;
-    color: aqua;
+    color: black;
     
     padding: 10px;
 }
 .email{
     font-size: 1.2em;
-    color: aquamarine;
+    color:black;
     padding: 10px;
 }
