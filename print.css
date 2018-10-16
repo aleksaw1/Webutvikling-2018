@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>print</title>
+</head>
+<body>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+header{
+    display: none;
+}
+nav{
+    display: none;
+}
+    
+.right-aside {
+    display: none;
+} 
+
+  .foot {
+      display: none;
+  }
+
+  .main-content {
+    display: grid;
+    justify-content: center;
+    margin: none;
+    font-size: 13px;
+}
+
+</body>
+</html>

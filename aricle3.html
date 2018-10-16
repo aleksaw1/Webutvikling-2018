@@ -4,28 +4,73 @@
 
 <html>
     <head>
-        <link href="css/article1.css" rel="stylesheet" type="text/css">
+           <!--CSS-->
+           <link href="article1.css" rel="stylesheet" type="text/css">
+           <!--Print-->
+        <link rel="stylesheet" type="text/css" href="print.css" media="print">
+        <!--Media mobil-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Google font-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+        <script>
+            window.onload=function(){
+                document.getElementById("menu-toggle-open").onclick=expandMenu;
+                document.getElementById("menu-toggle-close").onclick=collapseMenu;
+            }
+            function expandMenu(){
+                var openButton=document.getElementById("menu-toggle-open");
+               var closeButton= document.getElementById("menu-toggle-close");
+                openButton.style.display="none";
+                closeButton.style.display="block";
+                
+                list=document.getElementById("nav");
+                
+                list.className= "flex-container open-nav";
+                
+            }
+        function collapseMenu(){
+                var openButton=document.getElementById("menu-toggle-open");
+               var closeButton= document.getElementById("menu-toggle-close");
+                openButton.style.display="block";
+                closeButton.style.display="none";
+                
+                list=document.getElementById("nav");
+                
+                list.className= "flex-container close-nav";
+                
+            }
+        
+        </script>
     </head>
     <body>
         <header>
-            <h1 class="myname">Title</h1>
-            <img class="banner" src="photo2-1.jpg" >
+            <h1 class="myname">A.W</h1>
         </header>
         <nav class="mainnav">
-            <ul class="flex-container">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="article1.html">Git Hub</a></li>
-            <li><a href="article2.html">Media Type</a></li>
-            <li><a href="aricle3.html">CSS Layouts</a></li>
-                <li>
-                    <a href="" onclick="print()">Print</a>
-                </li>
-            </ul>
+                
+                <div class="open" id="menu-toggle-open">☰</div>
+                <div class="close" id="menu-toggle-close">X</div>
+            <ul id="nav" class="flex-container">
+
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="article1.html">Git Hub</a></li>
+                    <li><a href="article2.html">Media Types</a></li>
+                    <li><a href="aricle3.html">CSS Layouts</a></li>
+                    <li><a href="article1.html">Bilder til oppgave 2</a></li>
+                    <li><a href="article2.html">Media Types</a></li>
+                    <li><a href="aricle3.html">Universall utforming</a></li>
+                        <li>
+                            <a href="" onclick="print()">Print</a>
+                        </li>
+                    </ul>
         
         </nav>
         <main class="main-content">
             <h2>Layout og design</h2>
-            <img class="img1" src="flexboxcss.png">
+            <div class="img1">
+            <img class="img1" src="bilder/flexboxcss.png"></div>
             <article><h3>Layout og design.</h3>
                 Det finnes en rekke forskjellige metoder å designe en nettside på. 
                 Her er 4 teknikker for posisjonering av elementer i CSS.
@@ -81,8 +126,12 @@
         <footer class="foot">
             <div class="flex-right-container">
                 <div ><p class="myname1">Navn</p></div>
-                <div class="email">emailll</div>
+                <div class="email"><p>
+                   Send email til meg:
+                    <a href="mailto:aleksaw@hiof.no"><img src="mail.png"></a>
+                    </p></div>
             </div>
         </footer>
+
     </body>
 </html>

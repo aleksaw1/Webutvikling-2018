@@ -1,23 +1,71 @@
 
 <!DOCTYPE html>
-<html lang="en">
-    <meta charset="UTF-8">
-
 <html>
     <head>
-        <link href="css/home-style.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+          <!--CSS-->
+          <link href="home-style.css" rel="stylesheet" type="text/css">
+          <!--Print-->
+          <link rel="stylesheet" type="text/css" href="print.css" media="print">
+          <!--Media mobil-->
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <!--Google font-->
+          <link href="https://fonts.googleapis.com/css?family=Montserrat:600" rel="stylesheet">
+          <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+          <link rel="shortcut icon" href="logo/app.png"/>
+        <script>
+            window.onload=function(){
+                document.getElementById("menu-toggle-open").onclick=expandMenu;
+                document.getElementById("menu-toggle-close").onclick=collapseMenu;
+            }
+            function expandMenu(){
+                var openButton=document.getElementById("menu-toggle-open");
+               var closeButton= document.getElementById("menu-toggle-close");
+                openButton.style.display="none";
+                closeButton.style.display="block";
+                
+                list=document.getElementById("nav");
+                
+                list.className= "flex-container open-nav";
+                
+            }
+        function collapseMenu(){
+                var openButton=document.getElementById("menu-toggle-open");
+               var closeButton= document.getElementById("menu-toggle-close");
+                openButton.style.display="block";
+                closeButton.style.display="none";
+                
+                list=document.getElementById("nav");
+                
+                list.className= "flex-container close-nav";
+                
+            }
+        
+        </script>
+        
+        
+        
+        
     </head>
     <body>
         <header>
-            <h1 class="myname">Title</h1>
-            <img class="banner" src="photo2-1.jpg" >
+       <h1 class="myname">A.W</h1> 
+        
         </header>
         <nav class="mainnav">
-            <ul class="flex-container">
+                
+                <div class="open" id="menu-toggle-open"><img src="logo/menu.png"></div>
+                <div class="close" id="menu-toggle-close"><img src="logo/back.png" alt=""></div>
+            <ul id="nav" class="flex-container">
+
             <li><a href="index.html">Home</a></li>
             <li><a href="article1.html">Git Hub</a></li>
-            <li><a href="article2.html">Media Type</a></li>
+            <li><a href="article2.html">Media Types</a></li>
             <li><a href="aricle3.html">CSS Layouts</a></li>
+            <li><a href="article1.html">Bilder til oppgave 2</a></li>
+            <li><a href="article2.html">Media Types</a></li>
+            <li><a href="aricle3.html">Universall utforming</a></li>
                 <li>
                     <a href="" onclick="print()">Print</a>
                 </li>
@@ -25,25 +73,19 @@
         
         </nav>
         <main class="main-content">
-                <h2>Stetch av oppgaven</h2>
-                <img class="img1" src="oblig2pic.png">
-                <img class="img1" src="oblig2pic1.png">
+               <div class="flexchild">
+            
+            <img class="flex-img" src="bilder/githubpic.png">
+            <h2 ><a href="article1.html">Git Hub</a></h2>
+            <article>Git er et open-source versjonskontrollsystem som ble startet av Linus Trovalds-utvikleren av Linux. Det er et program der flere utviklere kan jobbe med et prosjekt "live". Man kan komme med justeringer mens forrige versoner av samme koden blir lagret på din repository. Dette gjør at utviklere enkelt kan samarbeide, da de kan laste ned en ny versjon av programvaren, gjøre endringer og laste opp den nyeste revisjonen. Hver utvikler kan se disse nye endringene, laste dem ned og bidra. GitHub er noe av det samme men i tilleg er det veldig sosialt. 
+                Utviklere kan se og følge andre utviklere og skape et nettverk med likesinnede mennesker. Eller jobbe sammen med prosjekter.
+                Github brukes også som et lagerplass, og mange oppevarer kodene side der. Det er også veldig enkelt å dele prosjektene. Man trenger bare å sende en link. 
+                Github er ikke bare for koder, man kan laste opp hvilke som helt filer. F.eks et word dokument...</article>
+            </div>
         
-               <div class="single-line"></div>
-            <h2>Github</h2>
-            <img class="img1" src="githubpic.png">
-            <article>Mentitum nulla labore ingeniis sunt. Nostrud tamen occaecat officia. In 
-                excepteur est doctrina ita velit ullamco appellat sed minim senserit an 
-                efflorescere, elit laboris fidelissimae. Cernantur minim aliquip. Nam nulla 
-                minim ubi probant, qui consequat te senserit, elit sed pariatur se irure, si 
-                ipsum distinguantur a ad illum tamen ab admodum, fore appellat ubi anim aliqua, 
-                probant fugiat incurreret fabulas, nulla sed singulis se esse. Ingeniis varias 
-                aliquip ullamco, mandaremus cohaerescant ut laboris, varias ingeniis 
-                exquisitaque, iudicem minim hic excepteur efflorescere.</article>
-           <div class="single-line"></div>
-            <h2>Mediatyper </h2>
-            <img src="css_media_type.png">
-            <article><h3>Medietyper.</h3>
+                  <div class="flexchild"> 
+            <img class="flex-img" src="bilder/css_media_type.png">
+            <h2 ><a href="article1.html">Mediatyper</a></h2>
                     Det finnes en rekke medietyper i CSS, som f.eks screen,
                     print,projector,speech,braille,tty,tv,embrossed,handheld
                      og 3d-glasss. Man kobler da de forskjellige stilarkene 
@@ -70,13 +112,14 @@
                        Derfor blir det
                         nye systemet benyttet
                          istedet. Den kalles
-                          media querries. </br>
-                </article>
-            <div class="single-line"></div>
-            <h2>CSS Layouts</h2>
-            <img src="flexboxcss.png">
+                          media querries. 
+                   </article></div>
+            
+        <div class="flexchild">
+        
+            <img class="flex-img" src="bilder/flexboxcss.png">
             <article>
-                <h3>Layout og design.</h3>
+                <h2 ><a href="article1.html">CSS layouts</a></h2>
 Det finnes en rekke forskjellige metoder å designe en nettside på. 
 Her er 4 teknikker for posisjonering av elementer i CSS.
 <ul><li>Standard posisjon heter «static». Der vises alle elementene i den rekkefølgen de er skevet i HTML dokumentet, og alt følger venstrekanen nedover.</li>
@@ -126,15 +169,21 @@ forandrer man bare et par linjer i koden. De fleste browsere støtter
 
 
 
-            </article>
-            <hr>
+            </article></div>
+            
         </main>
         <aside class="right-aside">
             <div class="vid-flex">
-                <video width="320" height="240" controls>
+                    <video width="320" height="240" controls>
                     <source src="video.mp4" type="video/mp4">
+                        Nettleseren støtter ikke videoavspilling.
                 </video>
-                <input type="button" value="Click Me" onclick="window.location.href='https://www.google.co.in/search?hl=en&source=hp&ei=f8q0W-qzIsHdvASitom4BA&q=github&oq=github&gs_l=psy-ab.3..0l5j0i131k1j0l4.206.4827.0.5150.6.6.0.0.0.0.163.688.1j5.6.0....0...1c.1.64.psy-ab..0.6.684...0i7i10i30k1j0i7i30k1.0.JVTBLg_-7JI';" class="gitlink">
+                 
+                      <p id="p">Trykk her for å lese mer om GitHub</p>
+               <input type="button" value="Github"
+                 onclick="window.location.href='https://www.google.co.in/search?hl=en&source=hp&ei=f8q0W-qzIsHdvASitom4BA&q=github&oq=github&gs_l=psy-ab.3..0l5j0i131k1j0l4.206.4827.0.5150.6.6.0.0.0.0.163.688.1j5.6.0....0...1c.1.64.psy-ab..0.6.684...0i7i10i30k1j0i7i30k1.0.JVTBLg_-7JI';" 
+                class="gitlink">
+                <img src="googleicon.png" alt="puchbutton">
             </div>
             <div class="mylinks">
                 <ul class="li"><li><a href="https://designmodo.com/responsive-design-examples/">Responsiv design - designmodo.com  </a></li>
@@ -142,13 +191,20 @@ forandrer man bare et par linjer i koden. De fleste browsere støtter
                 <li><a href="https://www.interaction-design.org/literature/article/responsive-design-let-the-device-do-the-work">Responsiv Design - interaction-design.org </a></li>
                 <li><a href="https://www.mercurytide.co.uk/blog/article/looking-future-responsive-design/">Responsiv design - mercurytide.co.uk </a></li>
                 <li><a href="https://www.sciencedirect.com/science/article/pii/S1877042813048829">Responsiv design - sciencedirect.com</a></li></ul>
+                
             </div>
         </aside>
         <footer class="foot">
             <div class="flex-right-container">
                 <div ><p class="myname1">Navn</p></div>
-                <div class="email">email:</div>
+                <div class="email"><p>
+                   Send email til meg:
+                    <a href="mailto:aleksaw@hiof.no"><img src="logo/mail.png"></a>
+                    </p></div>
             </div>
         </footer>
+
+
+    
     </body>
 </html>
